@@ -44,7 +44,7 @@ $result = $conn->query($sql);
     <div class="modal-content">
         <span class="close" onclick="closeCursoForm()">&times;</span>
         <h2 id="modalTitle">Agregar Curso</h2>
-        <form action="../modules/curso_module.php" method="POST" id="cursoForm"> <!-- Ruta ajustada -->
+        <form action="modules/curso_module.php" method="POST" id="cursoForm"> <!-- Ruta ajustada -->
             <input type="hidden" name="curso_id" id="curso_id">
             <label for="nombre_curso">Nombre del Curso:</label>
             <input type="text" name="nombre_curso" id="nombre_curso" required>
