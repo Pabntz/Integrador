@@ -1,0 +1,73 @@
+/* Estilo para el contenedor del login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: lightgray;
+}
+
+.login-container :hover {
+  border-color: #c5168b;
+}
+
+.login-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  border: 2px solid #325aef;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #325aef;
+  text-align: center;
+}
+
+.login-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-form input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #325aef;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #c5168b;
+}
+
+.link-register {
+  margin-left: 20px;
+  color: #c5168b;
+  margin: 20px;
+  margin-left: 50px;
+}
+
+.error-msg {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  text-align: center;
+}

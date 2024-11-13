@@ -1,0 +1,144 @@
+/* Aplicamos box-sizing a elementos que pueden desbordarse */
+.course-detail-container, .course-description-container, .course-index-container, .registration-form {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    min-height: 100vh;
+}
+
+.course-detail-container {
+    position: relative; /* Para posicionar el botón en relación con este contenedor */
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 5px;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    padding-bottom: 60px; /* Espacio para el botón */
+}
+
+.inscribirme-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.inscribirme-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease; /* Transición para un efecto suave al cambiar de tamaño */
+}
+
+.inscribirme-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.course-description-container {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.course-index-container {
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #325bef70;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.course-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #325aef;
+    text-align: center;
+}
+
+.course-index h2 {
+    font-size: 24px;
+    color: #325aef;
+    margin-bottom: 10px;
+}
+
+.course-index ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.course-index ul li {
+    margin: 5px 0;
+}
+
+.course-price h2 {
+    font-size: 24px;
+    color: #c5168b;
+    margin-top: 20px;
+}
+
+.course-price p {
+    font-size: 20px;
+    color: #c5168b;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .course-detail-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .inscribirme-container {
+        position: static; /* Quitar posición absoluta en pantallas pequeñas */
+        margin-top: 20px; /* Espacio extra arriba del botón */
+        text-align: center; /* Centrar el botón en pantallas pequeñas */
+    }
+
+    .inscribirme-btn {
+        width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+        font-size: 18px; /* Aumentar el tamaño de fuente para accesibilidad */
+        padding: 12px 0; /* Ajustar el relleno para que sea más grande */
+    }
+
+    .course-description-container, .course-index-container {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .course-description-container {
+        padding: 20px;
+    }
+
+    .course-index-container {
+        padding: 15px;
+    }
+
+    .registration-form {
+        padding: 15px;
+    }
+}
+

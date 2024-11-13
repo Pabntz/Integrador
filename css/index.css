@@ -1,0 +1,258 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Ajusta la distribución de los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  background-color: #325aef;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px; /* Asegúrate de que haya espacio en los extremos */
+  position: relative;
+  width: 100%;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.user-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.sticky {
+    position: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+  font-size: 25px;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 5px;
+  background-color: #325aef;
+}
+.menu-icon:hover {
+  background-color: #c5168b;
+}
+.logo {
+  height: 40px;
+  margin-right: 20px;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  flex-grow: 1;
+}
+.busuario {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15px; /* Agrega esto para empujar el texto hacia el centro */}
+
+.separator {
+  margin: 10px 0;
+}
+
+#menuAside {
+  display: none; /* Oculto por defecto */
+  transition: all 0.3s ease; /* Añadimos una transición suave */
+}
+
+#menuAside.open {
+  display: block; /* Mostrar el menú cuando tenga la clase 'open' */
+}
+aside {
+  z-index: 1;
+  position: fixed;
+  list-style-type: none;
+  padding: 10px;
+  display: block;
+  left: 0px;
+  top: 1;
+  width: 250px;
+  height: 100%;
+  background-color: #325bef50;
+  color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top: 0px;
+  box-shadow: #555;
+}
+aside ul {
+  list-style-type: none;
+  padding: 0%;
+  margin: 0%;
+}
+aside ul li {
+  list-style: none;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #3e88f7;
+  border-radius: 10px;
+}
+aside ul li a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+aside ul li a:hover {
+  background-color: #c5168b;
+  border-radius: 10px;
+}
+
+.main-container {
+  display: flex;
+  margin-left: 3%; 
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  margin-right: 3%;
+  border-radius: 3%;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Contenedor del carrusel de noticias */
+.news-carousel-container {
+  padding: 20px;
+  background-color: transparent;
+  max-width: 100%;
+  margin-top: 20px;
+  position: relative;
+  flex-direction: column;
+  height:max-content;
+
+}
+
+/* Cada cuadro de noticia (box) */
+.news-carousel {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.news-item {
+  display: none; /* Solo mostrar uno a la vez */
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.news-item.active {
+  display: block;
+}
+
+.news-image {
+  width: 100%;
+  max-width: 400px; /* Ajusta este valor según tus necesidades */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Descripción de cada noticia */
+.news-description {
+  margin-top: 10px;
+}
+
+.news-description h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.news-description p {
+  font-size: 16px;
+}
+
+/* Efecto de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#menuAside {
+  width: 250px;
+}

@@ -1,0 +1,70 @@
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-sort-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-sort-form input[type="text"],
+.search-sort-form select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-sort-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-sort-form button:hover {
+    background-color: #357ab7;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px; /* Agrega espacio dentro de las celdas */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea separadora */
+}
+
+th {
+    background-color: #888888;
+}
+
+tr:hover {
+    background-color: #f5f5f5; /* Efecto hover */
+}
